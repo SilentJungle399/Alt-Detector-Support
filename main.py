@@ -47,5 +47,5 @@ async def ping(ctx):
 		ping = (time.monotonic() - before) * 1000
 		await message.edit(content=f"Pong! `{int(ping)} ms`")
 
-token = "Nzc3NDU0Nzc2NDIwOTI1NDYw.X7DrLw.QMmq4RJqZMC4ZrnpIXjF4JVRFJg"
+token = "..."
 bot.run(token, bot = True, reconnect = True)
