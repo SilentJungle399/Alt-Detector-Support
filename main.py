@@ -5,6 +5,8 @@ import os
 from datetime import datetime
 import asyncio
 import time
+from dotenv import load_dotenv
+load_dotenv()
 
 intents = discord.Intents.default()
 intents.members = True
@@ -47,5 +49,5 @@ async def ping(ctx):
 		ping = (time.monotonic() - before) * 1000
 		await message.edit(content=f"Pong! `{int(ping)} ms`")
 
-token = "..."
+token = os.environ.get("TOKEN")
 bot.run(token, bot = True, reconnect = True)
